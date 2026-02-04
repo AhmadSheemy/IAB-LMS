@@ -1,0 +1,445 @@
+/* تنسيق الأزرار في الصفحة الرئيسية الجديدة (index.html) */
+.menu-button {
+    display: block;
+    padding: 20px 40px;
+    background-color: #C2113B;
+    color: #fdfdfd;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* لضمان التوسط */
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px; 
+    border: 0.5px solid #C2113B;
+}
+
+.menu-button:hover {
+    background-color: #1A3E72;
+    color: #fdfdfd;
+    transform: translateY(-2px);
+}
+
+/* **تعديل مهم** لتثبيت ارتفاع زر التوبيك ليناسب سطرين في صفحة الفيديوهات */
+body {
+    font-family: 'Proxima Nova Alt', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    text-align: center;
+    min-height: 80vh; /* يضمن أن الـ body يمتد على طول الشاشة بالكامل */
+    position: relative; 
+
+    /* *** خصائص الخلفية لكي تكون "استرتش" *** */
+    background-image: url('Images/background.jpg'); /* مسار صورة الخلفية */
+    background-size: contain; /* تجعل الصورة تغطي المساحة بالكامل مع الحفاظ على الأبعاد */
+    background-position: top center; /* توسط الصورة في الخلفية */
+    background-repeat: no-repeat; /* تمنع تكرار الصورة */
+    background-attachment: fixed; /* تثبت الصورة عند التمرير (Scroll) */
+    background-color: #E5E5E5; 
+}
+
+h1 {
+    position: fixed;
+    top: 0; 
+    width: 100%; /* *** مهم: لجعل العرض يغطي الصفحة بالكامل *** */
+    height: 75px; /* *** مهم: تحديد ارتفاع مناسب لإظهار الخلفية *** */
+    z-index: 1000; /* لضمان ظهوره فوق كل العناصر الأخرى */
+    color: #1A3E72; 
+    font-family: 'Playfair Display', serif;
+    margin-top: -1px;
+    font-size: 4em;
+    text-align: center;
+    top: 0; /* يلتصق بأعلى الـ popup-content */
+    background-image: url('Images/header.jpg');
+    background-size: contain; /* **2. يجعل الصورة تغطي المساحة بالكامل** */
+    background-position: top center; /* **3. توسط الصورة في الخلفية** */
+    background-repeat: no-repeat; /* **4. منع تكرار الصورة** */
+    background-attachment: scroll; /* نستخدم 'scroll' بدلاً من 'fixed' لأن العنصر نفسه ثابت */
+    /* إضافة لون احتياطي في حالة فشل تحميل الصورة، وجعل النص أكثر وضوحاً */
+    background-color: #E5E5E5; 
+    padding-top: 15px; /* لوسطنة النص داخل الـ 70 بكسل */
+    border-bottom: 5px solid #C2113B;
+}
+
+/* أضف هذه الأنماط الجديدة في ملف style.css */
+
+#map-title {
+    /* تطبيق تنسيقات مشابهة لـ #video-section h2 */
+    color: #C2113B;
+    height: 50px;
+    margin-top: 80px; /* لضمان التباعد عن العنوان الرئيسي الثابت (h1) */
+    margin-bottom: -70px; /* مسافة بسيطة قبل الخريطة */
+    font-size: 2em;
+    padding-top: 10px;
+    border: 0px solid #C2113B; 
+    border-radius: 12px; 
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    /* لجعل العنوان متوسطاً ومحاذياً للخريطة */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 3;
+}
+
+/* يجب تعديل الهامش العلوي للخريطة ليتناسب مع وجود العنوان الجديد */
+#map {
+    height: 590px;
+    width: 90%;   
+    max-width: 1000px; 
+    border: 5px solid #C2113B; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    /* تم تعديل الهامش العلوي (margin-top) ليكون أقل بعد إضافة العنوان */
+    margin-top: 5px;
+    z-index: 0; 
+}
+
+
+/* General popup styling */
+.leaflet-popup-content-wrapper {
+    margin-top: 50px;
+    width: 500px;/* - سيتحدد العرض تلقائياً بناءً على المحتوى أو minWidth/maxWidth */
+    background-color: #fff;
+    border: 2px solid #1A3E72; 
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35); 
+    padding-top: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+/* *** لجعل محتوى البوكس قابلاً للتمرير عمودياً فقط *** */
+.leaflet-popup-content {
+    max-height: 450px; /* *** تم زيادة الارتفاع الأقصى قليلاً لاستيعاب المزيد من المدربين *** */
+    width: 550px;
+    overflow-y: auto;   /* يجعل المحتوى قابلاً للتمرير عمودياً إذا تجاوز الارتفاع المحدد */
+    overflow-x: hidden; /* إخفاء أي شريط تمرير أفقي */
+    direction: ltr;
+}
+
+.leaflet-popup-content h3 {
+    /* تم إزالة width: 160%; - سيتحدد العرض تلقائياً */
+    color: #C2113B;
+    margin-top: 0; /* تم إرجاع margin-top إلى 0 أو قيمة إيجابية صغيرة */
+    margin-bottom: 15px; /* قيمة قياسية للتباعد */
+    font-size: 1.6em;
+    text-align: center;
+    /* *** التعديلات الجديدة لجعله sticky *** */
+    position: sticky;
+    top: 0; /* يلتصق بأعلى الـ popup-content */
+    background-color: #fff; /* خلفية لضمان عدم ظهور المحتوى تحته عند التمرير */
+    z-index: 2; /* لضمان ظهوره فوق محتوى الجدول عند التمرير */
+    padding-bottom: 1px; /* لإضافة بعض المساحة أسفل العنوان الملتصق */
+    border-bottom: 1px solid #eee; /* خط فاصل بسيط */
+}
+
+/* Table styling inside the popup */
+.airport-info-table {
+    width: 450px; /* *** مهم: جعل عرض الجدول 100% ليناسب عرض الـ Popup *** */
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1.1em; 
+}
+
+.airport-info-table th,
+.airport-info-table td {
+    border: 1px solid #1A3E72;
+    padding: 6px; 
+    text-align: left; 
+    /* لكسر الكلمات الطويلة ومنع تجاوز الخلايا */
+    word-break: break-word; 
+    overflow-wrap: break-word; 
+}
+
+.airport-info-table th {
+    background-color: #1A3E72;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center; 
+    /* *** التعديلات الجديدة لجعله sticky *** */
+    position: sticky;
+    top: 0; /* يلتصق بأعلى الـ popup-content أو أسفل الـ h3 الملتصق */
+    /* سيلتصق بعد انتهاء h3 */
+    background-color: #1A3E72; /* خلفية لرأس الجدول عند الالتصاق */
+    z-index: 1; /* لضمان ظهوره فوق محتوى الجدول */
+    /* *** مهم جداً: اضبط top بناءً على ارتفاع العنوان h3 والـ padding الخاص به *** */
+    /* إذا كان ارتفاع h3 حوالي 30px + padding-bottom 10px + margin-bottom 15px */
+    /* فإن رأس الجدول يجب أن يبدأ بعد حوالي 55px من الأعلى */
+    /* قم بتجربة القيمة أدناه: */
+    top: 25px; /* تقريبا ارتفاع h3 + margin + padding */
+}
+
+/* *** تحديد عرض الأعمدة لملائمة النصوص الطويلة (مجموع النسب 100%) *** */
+.airport-info-table th:nth-child(1),
+.airport-info-table td:nth-child(1) {
+    width: 30%; /* Trainer Name - زيادة لعرض اسم المدرب */
+}
+
+.airport-info-table th:nth-child(2),
+.airport-info-table td:nth-child(2) {
+    width: 25%; /* Title - زيادة لعرض اللقب */
+}
+
+.airport-info-table th:nth-child(3),
+.airport-info-table td:nth-child(3) {
+    width: 30%; /* Functions - تقليل طفيف لتوفير مساحة للآخرين */
+}
+
+.airport-info-table th:nth-child(4),
+.airport-info-table td:nth-child(4) {
+    width: 15%; /* Image - لم يتغير */
+}
+
+.airport-info-table td {
+    vertical-align: middle;
+    text-align: left; /* يمكن إرجاعها إلى center أو left حسب رغبتك */
+    font-weight: normal; 
+    color: #1A3E72; 
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.airport-info-table td strong {
+    vertical-align: middle;
+    text-align: center; 
+    font-weight: bold; 
+    color: #007bff; 
+    font-size: 1.0em;
+}
+
+/* New style for images inside the popup */
+.popup-img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 50px; 
+    height: auto;
+    border-radius: 5px;
+}
+.leaflet-marker-icon {
+    filter: drop-shadow(4px 4px 6px #C2113B); 
+}
+
+/* *** التعديل الجذري في CSS: لتحريك الـ Popup يمين أو يسار باستخدام left/top *** */
+.leaflet-popup {
+    transform: none !important; 
+    left: 50% !important; 
+    transform: translateX(5%) !important; /* لوسطنة البوكس أفقياً تماماً */
+    top: 20px !important; /* *** مهم: لرفع البوكس للأعلى لضمان رؤيته بالكامل *** */
+    /* يمكنك تعديل 5% إلى قيمة أخرى مثل 10% أو 20px حسب تفضيلك لموضع البوكس */
+}
+
+/* *** ضبط ذيل الـ popup (المثلث الصغير) ليناسب التحريك *** */
+/* يجب أن يكون الذيل في منتصف عرض البوكس */
+.leaflet-popup-tip {
+    left: 50% !important; /* جعل الذيل في منتصف عرض البوكس */
+    margin-left: 300px !important; /* إزاحة الذيل نصف عرضه ليتوسط تماماً (20px عرض الذيل، فنصفه 10px) */
+}
+
+/* *** التعديلات الجديدة لتقليل المسافة البادئة للـ UL/LI داخل خلايا الجدول *** */
+.airport-info-table ul {
+    margin: 0; /* إزالة الهامش الافتراضي العلوي والسفلي */
+    padding-left: 15px; /* تقليل المسافة البادئة الافتراضية */
+    list-style-type: disc; /* للتأكد من أن النقاط موجودة، يمكن تغييرها إلى circle, square, none */
+}
+
+.airport-info-table li {
+    margin-bottom: 2px; /* مسافة صغيرة بين عناصر القائمة */
+    font-size: 0.9em; /* يمكن ضبط حجم الخط هنا إذا أردت */
+    line-height: 1.2; /* لضبط تباعد الأسطر */
+}
+/* أضف هذه الأنماط الجديدة في نهاية ملف style.css */
+
+#video-section {
+    height: 590px;
+    width: 90%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 5px solid #C2113B; 
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    margin-top: 1px;
+    z-index: 0;
+    text-align: center;
+}
+
+#video-section h2 {
+    color: #C2113B;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+#video-links {
+    display: block;
+    text-align: center; /* سنوسط الأقسام (التوبيكات) */
+    gap: 0; 
+    padding: 20px 0;
+}
+
+/* تنسيق العنوان (التوبيك) الذي سيصبح زر القائمة المنسدلة */
+.topic-header-container {
+    position: relative; /* مهم لتموضع القائمة المنسدلة بالنسبة إليه */
+    display: inline-block; /* لتقليص حجمه حول النص */
+    margin: 10px;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topic-header {
+    background-color: #E5E5E5;
+    color: #1A3E72;
+    padding: 10px 15px;
+    margin: 0; /* إزالة الهامش من h3 */
+    height: 40px;
+    width: 90px;
+    border: 0.5px solid #C2113B;
+    border-radius: 6px;
+    line-height: 1.2; /* ضبط تباعد الأسطر */
+    white-space: normal;
+    display: flex;
+    align-items: center;   /* توسيط النص عمودياً (رأسياً) */
+    justify-content: center; /* توسيط النص أفقياً */
+    text-align: center; /* تأكيد المحاذاة الأفقية للنص المتعدد الأسطر */
+    overflow: hidden;      /* لإخفاء أي تجاوز إذا كان النص أكثر من سطرين */
+    font-size: clamp(10px, 1.1vw, 1em);
+    user-select: none; /* لمنع تحديد النص */
+    transition: background-color 0.3s;
+    box-shadow: 0 8px 16px 0px #C2113B;
+}
+
+/*.topic-header:hover {
+    background-color: #C2113B;
+    color: #fdfdfd;
+}*/
+
+.topic-header-container:hover .topic-header {
+    background-color: #C2113B; /* تطبيق اللون الأحمر */
+    color: #fdfdfd;
+    transform: translateY(-2px);
+    border-bottom-left-radius: 0;
+}
+
+/* تنسيق حاوية القائمة المنسدلة (المحتوى المخفي) */
+.dropdown-content {
+    display: none; /* **مهم: إخفاء القائمة في الوضع الافتراضي** */
+    position: absolute;
+    top: 102%; /* يبدأ أسفل التوبيك مباشرة */
+    left: 0;
+    min-width: 95%; /* يجب أن يكون على الأقل بعرض التوبيك */
+    max-width: 95%;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10; /* لضمان ظهورها فوق العناصر الأخرى */
+}
+
+/* عند الوقوف على التوبيك، يتم عرض القائمة المنسدلة */
+.topic-header-container:hover .dropdown-content {
+    display: block;
+}
+
+/* تنسيق أزرار الفيديوهات داخل القائمة المنسدلة */
+.video-link-btn {
+    display: block; /* لعرض الأزرار بشكل عمودي */
+    background-color: #E5E5E5;
+    color: #1A3E72;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    width: 100%; /* يملأ العرض المتاح */
+    box-sizing: border-box; /* لضمان أن العرض يشمل البادينغ */
+    transition: background-color 0.2s, color 0.2s;
+    text-decoration: none;
+}
+
+.video-link-btn:hover {
+    background-color: #C2113B;
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+#video-player-container {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0); /* خلفية داكنة للمشغل */
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: hidden; /* لضمان أن الفيديو لا يتجاوز الحدود */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#current-video-title {
+    color: #C2113B;
+    font-weight: bold;
+    padding: 25px;
+    text-align: center;
+    /* لإخفاء هذا العنوان عندما تكون الرسالة "Select a video..." ظاهرة */
+    display: none; 
+}
+
+#video-display {
+    width: 100%;
+    height: 282px;
+    display: block;
+    border-radius: 6px;
+}
+
+#video-message {
+    color: #C2113B;
+    padding: 10px;
+    display: block;
+}
+
+/* إضافة قاعدة لمنع النقر بالزر الأيمن على الفيديو (مستوى حماية بسيط) */
+#video-display {
+    user-select: none; /* لمنع تحديد النص */
+    -webkit-user-select: none;
+    pointer-events: auto; /* مهم لتمكين التفاعل */
+}
+
+/* يمكنك إضافة هذا السطر لإخفاء زر التنزيل في بعض المتصفحات الداعمة */
+#video-display::-webkit-media-controls-download-button {
+    display: none;
+}
+/* تنسيق زر العودة للصفحة الرئيسية (Home Button) */
+.home-button {
+    position: fixed;
+    top: 15px; /* مسافة من الأعلى */
+    right: 20px; /* مسافة من اليسار */
+    z-index: 1001; /* أعلى من h1 لضمان ظهوره */
+    padding: 8px 15px;
+    background-color: #C2113B; /* اللون الأحمر المميز */
+    color: #fdfdfd;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home-button:hover {
+    background-color: #1A3E72; /* اللون الأزرق عند الوقوف عليه */
+    transform: scale(1.05); /* تأثير تكبير بسيط */
+}
+/* تطبيق هامش علوي موحد على أول عنصر بعد h1 في كل صفحة.
+القيمة 100px تضمن أن المحتوى يبدأ أسفل h1 الثابت بمسافة كافية.
+*/
+.map-section-start,
+#video-section {
+    /* *** الهامش الموحد الذي يضمن عدم التداخل مع h1 الثابت *** */
+    margin-top: 75px; 
+}
