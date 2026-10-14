@@ -79,12 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         image: "Images/572.jpeg"
                     },
                     {
-                        name: "Eng. Mohamed Yousef",
-                        title: "Training Supervisor",
-                        functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>SMS</li><li>iPort</li><li>ALTEA CM</li><li>CRANE</li></ul>",
-                        image: "Images/847.jpg"
-                    },
-                    {
                         name: "Mr. Ahmad Abdalla",
                         title: "Quality Supervisor",
                         functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>iPort</li></ul>",
@@ -140,12 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         image: "Images/572.jpeg"
                     },
                     {
-                        name: "Eng. Mohamed Yousef",
-                        title: "Training Supervisor",
-                        functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>SMS</li><li>iPort</li><li>ALTEA CM</li><li>CRANE</li></ul>",
-                        image: "Images/847.jpg"
-                    },
-                    {
                         name: "Mr. Ahmad Abdalla",
                         title: "Quality Supervisor",
                         functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>iPort</li></ul>",
@@ -154,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             },
             {
-                name: "HBE",
+                name: "ALY",
                 lat: 30.9200,
                 lng: 29.6950,
                 trainers: [
@@ -181,12 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         title: "Training Manager",
                         functions: "<ul><li>Passenger</li><li>Ramp</li><li>Load Control</li><li>SMS</li><li>SABRE</li><li>ALTEA CM</li></ul>",
                         image: "Images/572.jpeg"
-                    },
-                    {
-                        name: "Eng. Mohamed Yousef",
-                        title: "Training Supervisor",
-                        functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>SMS</li><li>iPort</li><li>ALTEA CM</li><li>CRANE</li></ul>",
-                        image: "Images/847.jpg"
                     },
                     {
                         name: "Mr. Ahmad Abdalla",
@@ -232,12 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         image: "Images/572.jpeg"
                     },
                     {
-                        name: "Eng. Mohamed Yousef",
-                        title: "Training Supervisor",
-                        functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>SMS</li><li>iPort</li><li>ALTEA CM</li><li>CRANE</li></ul>",
-                        image: "Images/847.jpg"
-                    },
-                    {
                         name: "Mr. Ahmad Abdalla",
                         title: "Quality Supervisor",
                         functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>iPort</li></ul>",
@@ -258,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             },
             {
-                name: "HRG",
+                name: "HRG & RMF",
                 lat: 27.1770,
                 lng: 33.7990,
                 trainers: [
@@ -287,12 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         image: "Images/572.jpeg"
                     },
                     {
-                        name: "Eng. Mohamed Yousef",
-                        title: "Training Supervisor",
-                        functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>SMS</li><li>iPort</li><li>ALTEA CM</li><li>CRANE</li></ul>",
-                        image: "Images/847.jpg"
-                    },
-                    {
                         name: "Mr. Ahmad Abdalla",
                         title: "Quality Supervisor",
                         functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>iPort</li></ul>",
@@ -319,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             },
             {
-                name: "LXR",
+                name: "LXR & ASW",
                 lat: 25.6720,
                 lng: 32.7030,
                 trainers: [
@@ -348,12 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         image: "Images/572.jpeg"
                     },
                     {
-                        name: "Eng. Mohamed Yousef",
-                        title: "Training Supervisor",
-                        functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>SMS</li><li>iPort</li><li>ALTEA CM</li><li>CRANE</li></ul>",
-                        image: "Images/847.jpg"
-                    },
-                    {
                         name: "Mr. Ahmad Abdalla",
                         title: "Quality Supervisor",
                         functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>iPort</li></ul>",
@@ -362,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             },
             {
-                name: "HMB",
+                name: "HMB & ATZ",
                 lat: 26.3392,
                 lng: 31.7378,
                 trainers: [
@@ -389,12 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         title: "Training Manager",
                         functions: "<ul><li>Passenger</li><li>Ramp</li><li>Load Control</li><li>SMS</li><li>SABRE</li><li>ALTEA CM</li></ul>",
                         image: "Images/572.jpeg"
-                    },
-                    {
-                        name: "Eng. Mohamed Yousef",
-                        title: "Training Supervisor",
-                        functions: "<ul><li>Passenger</li><li>Ramp</li><li>Baggage Service & World Tracer</li><li>SMS</li><li>iPort</li><li>ALTEA CM</li><li>CRANE</li></ul>",
-                        image: "Images/847.jpg"
                     },
                     {
                         name: "Mr. Ahmad Abdalla",
