@@ -43,9 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }).setView([26.9206, 26.8025], 6); // [Latitude, Longitude], initial zoom level for Egypt
 
         // 2. Add the base map layer (tiles)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri Korea, Esri (Thailand), TomTom, 2012'
         }).addTo(map);
 
         // 3. Define airport data (البيانات التي تم إرسالها سابقاً)
